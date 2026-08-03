@@ -10,9 +10,9 @@
     --bg-color: #fcfcfc;
     --shadow-dark: #d0d2d3;
     --shadow-light: #ffffff;
-    --accent-blue: #0072ff;
-    --text-primary: #2d3748;
-    --text-secondary: #64748b;
+    --accent-blue: #0065c9;
+    --text-primary: #0065c9;
+    --text-secondary: #4a6fa5;
   }
 
   * {
@@ -46,6 +46,7 @@
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 8px;
+    color: var(--accent-blue);
   }
 
   header p {
@@ -63,6 +64,7 @@
     margin-bottom: 24px;
     position: relative;
     padding-left: 14px;
+    color: var(--accent-blue);
   }
 
   .section-title::before {
@@ -85,6 +87,10 @@
     line-height: 1.7;
   }
 
+  .rationale-card > p {
+    color: #334155;
+  }
+
   .rationale-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -102,6 +108,10 @@
   .rationale-item h4 {
     margin-bottom: 8px;
     color: var(--accent-blue);
+  }
+
+  .rationale-item p {
+    color: #475569;
   }
 
   /* User Flow Showcase & Overview Board */
@@ -177,6 +187,7 @@
   .screen-card h3 {
     font-size: 1.1rem;
     margin-bottom: 4px;
+    color: var(--accent-blue);
   }
 
   .screen-card p {
