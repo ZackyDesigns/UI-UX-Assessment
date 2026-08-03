@@ -79,16 +79,16 @@
     border-radius: 3px;
   }
 
-  /* User Profile Card */
-  .user-profile-card {
+  /* User Persona Card */
+  .persona-card {
     background: var(--bg-color);
     box-shadow: 8px 8px 18px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
     border-radius: 20px;
     padding: 28px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
-  .profile-header {
+  .persona-header {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -97,7 +97,7 @@
     border-bottom: 2px solid rgba(0, 101, 201, 0.1);
   }
 
-  .profile-avatar {
+  .persona-avatar {
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -112,23 +112,48 @@
     flex-shrink: 0;
   }
 
-  .profile-meta h3 {
+  .persona-meta h3 {
     color: var(--accent-blue);
     font-size: 1.3rem;
   }
 
-  .profile-meta p {
+  .persona-meta p {
     color: var(--text-secondary);
     font-size: 0.95rem;
   }
 
-  .profile-details p {
-    margin-bottom: 12px;
-    line-height: 1.6;
+  .persona-details p {
+    margin-bottom: 14px;
+    line-height: 1.65;
     color: var(--body-text);
   }
 
-  .profile-details p:last-child {
+  .persona-details p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Key Principles / Strategy Card */
+  .strategy-card {
+    background: var(--bg-color);
+    box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 28px;
+  }
+
+  .strategy-card h3 {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+
+  .strategy-card p {
+    color: var(--body-text);
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+
+  .strategy-card p:last-child {
     margin-bottom: 0;
   }
 
@@ -136,86 +161,57 @@
   .rationale-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 24px;
     margin-top: 24px;
   }
 
   .rationale-item {
     background: var(--bg-color);
     box-shadow: 6px 6px 14px var(--shadow-dark), -6px -6px 14px var(--shadow-light);
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 24px;
   }
 
   .rationale-item h4 {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     color: var(--accent-blue);
     font-size: 1.1rem;
+    font-weight: 800;
   }
 
-  .rationale-item p {
-    color: var(--body-text);
-    line-height: 1.6;
-    font-size: 0.95rem;
-  }
-
-  /* Pulse Highlight Card */
-  .pulse-highlight-card {
-    background: var(--bg-color);
-    box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
-    border-radius: 20px;
-    padding: 28px;
-    margin-top: 24px;
-  }
-
-  .pulse-badge {
-    display: inline-block;
-    padding: 4px 12px;
-    background: var(--accent-blue);
-    color: #ffffff;
-    font-size: 0.8rem;
-    font-weight: 700;
-    border-radius: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-  }
-
-  .pulse-header h3 {
-    color: var(--accent-blue);
-    margin-bottom: 16px;
-    font-size: 1.25rem;
-  }
-
-  .pulse-content ul {
+  .rationale-item ul {
     list-style: none;
-    padding: 0;
+    padding-left: 0;
   }
 
-  .pulse-content li {
+  .rationale-item li {
     position: relative;
-    padding-left: 20px;
-    margin-bottom: 14px;
-    line-height: 1.6;
+    padding-left: 18px;
+    margin-bottom: 12px;
     color: var(--body-text);
+    line-height: 1.55;
     font-size: 0.95rem;
   }
 
-  .pulse-content li:last-child {
+  .rationale-item li:last-child {
     margin-bottom: 0;
   }
 
-  .pulse-content li::before {
+  .rationale-item li::before {
     content: "•";
     color: var(--accent-blue);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     position: absolute;
     left: 0;
-    top: -4px;
+    top: -2px;
   }
 
-  /* User Flow Showcase & Overview Board */
+  .rationale-item strong {
+    color: var(--accent-blue);
+  }
+
+  /* Large Images / Full Board */
   .large-image-container {
     background: var(--bg-color);
     box-shadow: 8px 8px 18px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
@@ -299,7 +295,7 @@
   @media (max-width: 600px) {
     body { padding: 16px 8px; }
     .container { padding: 20px 16px; }
-    .profile-header { flex-direction: column; text-align: center; }
+    .persona-header { flex-direction: column; text-align: center; }
   }
 </style>
 </head>
@@ -308,55 +304,61 @@
 <div class="container">
   <header>
     <h1>Project Title Showcase</h1>
-    <p>UI/UX Case Study • User Flow & Screen Presentations</p>
+    <p>UI/UX Case Study</p>
   </header>
 
   <!-- Section 1: Design Rationale -->
   <section>
     <h2 class="section-title">Design Rationale</h2>
-    
-    <!-- User Profile Card -->
-    <div class="user-profile-card">
-      <div class="profile-header">
-        <div class="profile-avatar">SD</div>
-        <div class="profile-meta">
+
+    <!-- User Persona Overview Card -->
+    <div class="persona-card">
+      <div class="persona-header">
+        <div class="persona-avatar">SD</div>
+        <div class="persona-meta">
           <h3>Sipho Dlamini</h3>
           <p>28-year-old Software Developer • R25,000/month • Master's Student</p>
         </div>
       </div>
-      <div class="profile-details">
-        <p><strong>Context &amp; Challenges:</strong> Between work, studying, raising his young son, and paying off student debt, he has almost no free-time. He wants to build his credit score, save consistently, start investing, and eventually qualify for a home loan, while also building financial security for his son's future.</p>
-        <p><strong>The Core Problem:</strong> Sipho knows what he wants to achieve financially but struggles to know what should take priority. His money is spread across different accounts and responsibilities, leaving him feeling overwhelmed by which decisions to take. Nova helps him prioritise by presenting his financial health in one place and recommending the most important action to take.</p>
+      <div class="persona-details">
+        <p><strong>Context &amp; Responsibilities:</strong> Between work, studying towards his Master's degree in software engineering, raising his young son, and paying off student debt, Sipho has almost no free time. He wants to build his credit score, save consistently, start investing, and eventually qualify for a home loan—all while building financial security for his son's future.</p>
+        <p><strong>The Primary Pain Point:</strong> Sipho knows what he wants to achieve financially, but struggles to know what should take priority. His money is spread across different accounts and responsibilities, leaving him feeling overwhelmed by which decisions to make. Nova helps him prioritise by presenting his financial health in one place and recommending the most important action to take.</p>
       </div>
     </div>
 
-    <!-- 3-Column Strategy Grid -->
+    <!-- Core Experience Strategy Card -->
+    <div class="strategy-card">
+      <h3>The Control Room &amp; Financial Pulse</h3>
+      <p>The home page was designed to act as the user's control room. Everything users need most is accessible from a single screen, including Savings, Investments, Credit, and Expenses. The goal was to let users understand where they stand and what they should focus on without navigating through multiple pages.</p>
+      <p>The focal point of the home screen is the <strong>Financial Pulse</strong>, inspired by a heart rate monitor. Rather than showing several separate scores, it gives users an indicator of their overall financial health based on their savings, expenses, credit, investments, and cash flow. If the Pulse begins to slow, the app directs users to the section that needs attention, keeping the home screen clean while making vital information easy to find.</p>
+    </div>
+
+    <!-- 3 Pillar Breakdown Cards -->
     <div class="rationale-grid">
       <div class="rationale-item">
-        <h4>01. Control Room Dashboard</h4>
-        <p>The home page was designed to act as the user's control room. Everything users need most is accessible from a single screen, including Savings, Investments, Credit, and Expenses. The goal was to let users understand where they stand and what they should focus on without navigating through multiple pages.</p>
-      </div>
-      <div class="rationale-item">
-        <h4>02. Visuals &amp; Color Psychology</h4>
-        <p>To reduce anxiety, colours commonly associated with danger or caution, such as red, orange, and yellow, were avoided. Instead, navy blue was chosen as the primary colour because it is often associated with trust and stability. White was kept as the dominant background colour to maintain the familiarity users already expect from fintech applications, while a neomorphic design gives the UI a modern feel while still feeling familiar.</p>
-      </div>
-      <div class="rationale-item">
-        <h4>03. Encouraging Micro-Copy</h4>
-        <p>The wording throughout the application avoids negative connotations. Rather than making users feel like they have done something wrong, the app focuses on providing solutions and encouraging positive habits. Completing a recommended action provides immediate positive feedback, reinforcing progress instead of highlighting mistakes.</p>
-      </div>
-    </div>
-
-    <!-- Feature Highlight Card -->
-    <div class="pulse-highlight-card">
-      <div class="pulse-content">
-        <div class="pulse-header">
-          <div class="pulse-badge">Key Feature</div>
-          <h3>Financial Pulse &amp; Focused Attention</h3>
-        </div>
+        <h4>01. Core Goal</h4>
         <ul>
-          <li><strong>Focused Attention:</strong> To attract the user's attention without overwhelming them, only one notification or animation appears at a time. The most urgent task is always highlighted first, prompting the user towards the action that will have the most impact on their financial well-being.</li>
-          <li><strong>Financial Pulse Indicator:</strong> The focal point of the home screen Financial Pulse, inspired by a heart rate monitor. Rather than showing several separate scores, it gives users an indicator of their overall financial health based on their savings, expenses, credit, investments, and cash flow.</li>
-          <li><strong>Action-Oriented Navigation:</strong> If the Pulse begins to slow, the app directs users to the section that needs attention, helping keep the home screen clean while still making important information easy to find.</li>
+          <li><strong>Unified Control Center:</strong> Centralize savings, credit, investments, and expenses into a single screen to eliminate multi-page navigation.</li>
+          <li><strong>Smart Prioritization:</strong> Guide users with clear, single-action recommendations and an overall "Financial Pulse" health indicator.</li>
+          <li><strong>Stress-Free Fintech UX:</strong> Reduce anxiety through calming navy visual tones, non-judgmental messaging, and encouraging positive feedback.</li>
+        </ul>
+      </div>
+
+      <div class="rationale-item">
+        <h4>02. Visual Language</h4>
+        <ul>
+          <li><strong>Color Psychology:</strong> Built around trust-inducing Navy Blue (<code>#0065c9</code>) and clean white space, completely avoiding stress-inducing warning colors like red, orange, or yellow.</li>
+          <li><strong>Neomorphic Aesthetics:</strong> Modern, soft-extruded UI controls that create tactile depth while keeping the interface reassuringly familiar.</li>
+          <li><strong>Positive Framing:</strong> Tone of voice avoids negative connotations or mistake-highlighting, focusing purely on constructive next steps and encouraging progress.</li>
+        </ul>
+      </div>
+
+      <div class="rationale-item">
+        <h4>03. Accessibility &amp; Focus</h4>
+        <ul>
+          <li><strong>Single Focal Point:</strong> Highlights only one urgent task or animation at a time to keep busy users like Sipho from feeling cognitive overload.</li>
+          <li><strong>Financial Pulse:</strong> A single heart-rate-style indicator replaces multiple cluttered scores, aggregating savings, credit, and cash flow at a glance.</li>
+          <li><strong>One-Tap Priority:</strong> Directs users straight to the specific section needing attention whenever the pulse slows down, minimizing unnecessary navigation depth.</li>
         </ul>
       </div>
     </div>
@@ -374,7 +376,7 @@
 
   <!-- Section 3: Full Board Overview -->
   <section>
-    <h2 class="section-title">Full Layout Board</h2>
+    <h2 class="section-title">High Fidelity Layout</h2>
     <div class="large-image-container">
       <div class="large-image-frame">
         <img src="images/UXAss.png" alt="All Screens Overview Board">
