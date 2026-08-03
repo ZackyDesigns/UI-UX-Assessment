@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI/UX Case Study Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-color: #e6e8eb;
+    --shadow-dark: #bfc1c2;
+    --shadow-light: #ffffff;
+    --accent-blue: #0072ff;
+    --text-primary: #2d3748;
+    --text-secondary: #64748b;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #e6e8eb 0%, #f5f6f8 100%);
+    color: var(--text-primary);
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--bg-color);
+    box-shadow: 16px 16px 32px var(--shadow-dark), -16px -16px 32px var(--shadow-light);
+    border-radius: 30px;
+    padding: 40px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    position: relative;
+    padding-left: 14px;
+  }
+
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15%;
+    height: 70%;
+    width: 5px;
+    background: var(--accent-blue);
+    border-radius: 3px;
+  }
+
+  /* Rationale Card */
+  .rationale-card {
+    background: var(--bg-color);
+    box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+    border-radius: 20px;
+    padding: 28px;
+    line-height: 1.7;
+  }
+
+  .rationale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+  }
+
+  .rationale-item {
+    background: var(--bg-color);
+    box-shadow: 6px 6px 14px var(--shadow-dark), -6px -6px 14px var(--shadow-light);
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  .rationale-item h4 {
+    margin-bottom: 8px;
+    color: var(--accent-blue);
+  }
+
+  /* Screens Grid */
+  .screens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .screen-card {
+    background: var(--bg-color);
+    box-shadow: 8px 8px 18px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
+    border-radius: 20px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .screen-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+  }
+
+  .screen-frame {
+    width: 100%;
+    height: 380px;
+    border-radius: 14px;
+    background: #d9dcff;
+    box-shadow: inset 4px 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+
+  .screen-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .screen-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .screen-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  /* User Flow Showcase */
+  .flow-container {
+    background: var(--bg-color);
+    box-shadow: 8px 8px 18px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .flow-frame {
+    width: 100%;
+    min-height: 280px;
+    border-radius: 14px;
+    background: var(--bg-color);
+    box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .flow-frame img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Project Title Showcase</h1>
+    <p>UI/UX Case Study • User Flow & Screen Presentations</p>
+  </header>
+
+  <!-- Section 1: Design Rationale -->
+  <section>
+    <h2 class="section-title">Design Rationale</h2>
+    <div class="rationale-card">
+      <p>Brief summary of the core UX objective, problem statement, and solution strategy.</p>
+      <div class="rationale-grid">
+        <div class="rationale-item">
+          <h4>01. Core Goal</h4>
+          <p>Streamline user interactions by reducing tap depth across primary journeys.</p>
+        </div>
+        <div class="rationale-item">
+          <h4>02. Visual Language</h4>
+          <p>Soft-extruded neomorphic elements paired with high-contrast typography for legibility.</p>
+        </div>
+        <div class="rationale-item">
+          <h4>03. Accessibility Focus</h4>
+          <p>Ensured tap-target compliance and contrast ratios across interactive visual components.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: User Flow Diagram -->
+  <section>
+    <h2 class="section-title">User Flow</h2>
+    <div class="flow-container">
+      <div class="flow-frame">
+        <!-- Replace src with your User Flow Diagram image -->
+        <img src="media/user-flow.jpg" alt="User Flow Diagram">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: UI Layouts (6 Screens) -->
+  <section>
+    <h2 class="section-title">Screen Layouts</h2>
+    <div class="screens-grid">
+      
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="media/screen1.jpg" alt="Screen 1">
+        </div>
+        <h3>01. Onboarding</h3>
+        <p>Entry point & preferences</p>
+      </div>
+
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="media/screen2.jpg" alt="Screen 2">
+        </div>
+        <h3>02. Home Dashboard</h3>
+        <p>Primary navigation hub</p>
+      </div>
+
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="media/screen3.jpg" alt="Screen 3">
+        </div>
+        <h3>03. Search & Filter</h3>
+        <p>Discovery mechanisms</p>
+      </div>
+
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="media/screen4.jpg" alt="Screen 4">
+        </div>
+        <h3>04. Detail View</h3>
+        <p>In-depth item specs</p>
+      </div>
+
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="media/screen5.jpg" alt="Screen 5">
+        </div>
+        <h3>05. Checkout / Action</h3>
+        <p>Primary conversion step</p>
+      </div>
+
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="media/screen6.jpg" alt="Screen 6">
+        </div>
+        <h3>06. Confirmation</h3>
+        <p>Feedback & next actions</p>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
